@@ -1,24 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Startup</title>
+<head>
+	<title>Dashboard v0</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Welcome to the dashboard</h1>
+	
+<div class="search">
+      <input type="text" placeholder="Enter Zip Code" id="search-txt"><br>
+      <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
+</div>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<div id="city-name2">placeholder</div><br>
+<div class="forecast">
+	
+	<div class="forecastPanel" id="forecast1">
+		<!-- Day 1<br> -->
+		<div id="date1"></div>
+		<div class="forecastIcon">
+			<img src="" alt="" id="icon1"><br>	
+		</div>
+		<div id="temp1"></div><br>
+		<div id="wind1"></div><br>
+	</div>
+	<div class="forecastPanel" id="forecast2">
+		<!-- Day 2<br> -->
+		<div id="date2"></div>
+		<div class="forecastIcon">
+			<img src="" alt="" id="icon2"><br>	
+		</div>
+		<div id="temp2"></div><br>
+		<div id="wind2"></div><br>
+	</div>
+	<div class="forecastPanel" id="forecast3">
+		<!-- Day 3<br> -->
+		<div id="date3"></div>
+		<div class="forecastIcon">
+			<img src="" alt="" id="icon3"><br>	
+		</div>
+		<div id="temp3"></div><br>
+		<div id="wind3"></div><br>
+	</div>
+	<div class="forecastPanel" id="forecast4">
+		<!-- Day 4<br> -->
+		<div id="date4"></div>
+		<div class="forecastIcon">
+			<img src="" alt="" id="icon4"><br>	
+		</div>
+		<div id="temp4"></div><br>
+		<div id="wind4"></div><br>
+	</div>
+	<div class="forecastPanel" id="forecast5">
+		<!-- Day 5<br> -->
+		<div id="date5"></div>
+		<div class="forecastIcon">
+			<img src="" alt="" id="icon5"><br>	
+		</div>
+		<div id="temp5"></div><br>
+		<div id="wind5"></div><br>
+	</div>
+</div>
 
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!-- <div class="container">
+  <header class="header">
+    
+  </header>
 
-    <!-- Your own stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      The biggest startup event of the year
+  <main id="main">
+    
+    <div class="city-icon">
+      <div class="city-icon-holder">
+      <div id="city-name"></div>
+      <img src="" alt="" id="icon">
+        </div>
     </div>
-
-    <div class="container" id="call">
-      <a class="btn btn-success" href="register.html" role="button">Find out more</a>
+    
+    <div class="temperature">
+      <div id="temp"></div>
     </div>
-  </body>
+    
+    <div class="humidity">
+      <div id="humidity-div"></div> -->
+    <!-- </div> -->
+
+<!-- <script type="text/javascript">
+	results.loadhtml('http://api.openweathermap.org/data/2.5/weather?q=Montreal&mode=html&appid=d8cdfb57dd1cf4dd7d7245ca5572dee0');
+</script> -->
+
+<script type="text/javascript" src="script.js"></script>
+</body>
 </html>
