@@ -2,11 +2,55 @@ h1 {
 	text-align: center;
 }
 
-/*boostlog tutorial*/
 body{
   background-color: #eee;
   font-family:Arial;
 }
+
+#topRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.cal {
+	display: flex;
+	justify-content: center;
+	font-size: 50px;
+	align-content: flex-end;
+}
+.calElement {
+	padding: 5px;
+	/*font-size: 22px;*/
+	align-self: flex-end;
+}
+
+#calHour {
+	font-size: 200px;
+	padding-right: 0px;
+}
+
+#calMin {
+	padding-left: 0px;
+	padding-bottom: 15px;
+}
+
+#calAmPm {
+	font-size: 25px;
+	padding-bottom: 15px;
+}
+
+#calMonth {
+
+}
+
+#calDay {
+
+}
+
+#calTime {
+
+}
+
 
 #city-name2 {
 	display: stretch;
@@ -36,94 +80,16 @@ body{
   text-align: center;
   color: white;
   border-radius: 5px;
-  padding: 15px
+  justify-content: center;
+  align-content: center;
+  /*padding: 20px, 0;*/
+  /*align-content: center;*/
 }
 
 .forecastPanel:hover {
 	transform: scale(1.1);
 	animation: ease-in(1.5);
 	transition: .5s;
-}
-
-.container{
-  width: 500px;
-  height: 300px;
-  margin:5vh auto;
-  border-radius: 25px;
-  box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3)
-}
-
-.header {
-  height: 20%;
-  background-color: #FF9800;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  text-align: center;
-  position:relative;
-}
-
-#temp, #humidity-div {
-  /*font-family: "Courier New";*/
-  font-weight: bold;
-  font-size: 60px;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.city-icon-holder {
-  position:absolute;
-  left: 25%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-#city-name {
-  /*font-family: "Arial";*/
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-}
-
-#icon {
-  width:50%;
-}
-
-#main{
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.city-icon {
-  height: 80%;
-  width: 50%;
-  border-bottom-left-radius: 25px;
-  background-color: #FFC107;
-}
-
-.temperature {
-  position: absolute;
-  left: 50%;
-  top:0%;
-  height: 40%;
-  width: 50%;
-  background-color: #9C27B0;
-}
-
-.humidity {
-  height: 40%;
-  width: 50%;
-  position:absolute;
-  left:50%;
-  top:40%;
-  border-bottom-right-radius: 25px;
-  background-color: #E91E63;
 }
 
 #search-btn {
