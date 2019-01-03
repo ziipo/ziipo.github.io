@@ -1,3 +1,40 @@
+// Welcome title and name
+if (sessionStorage.getItem("nameKey") !== null) {
+	var yourName = sessionStorage.getItem("nameKey");	
+} else {
+	var yourName = "Ken";	
+}
+let welcome = document.getElementById("welcome");
+updateWelcome();
+
+function updateWelcome() {
+	welcome.textContent = "Hello, " + yourName;	
+}
+
+// updating the welcome name
+	let nameButton = document.getElementById("name-btn");
+	let nameInput = document.getElementById("name-txt");
+	nameButton.addEventListener("click", changeName);
+	nameInput.addEventListener("keyup", nameEnterPressed);
+	
+	function nameEnterPressed(event) {
+	  if (event.key === "Enter") {
+	    changeName();
+	  }
+	}
+
+function changeName() {
+	if (nameInput.value === "") {
+	  
+	  } else {
+	   yourName = nameInput.value;
+	   updateWelcome();
+	   sessionStorage.setItem("nameKey", yourName);
+	  }
+}
+
+
+
 // weather stuff
 
 	const appKey = "f24f40b1c24505685fce3b8acd0fcffc";
@@ -158,8 +195,6 @@
 	}
 	setTimeout(setCalendar, 600);
 	setInterval(setCalendar,5000);
-
-
 
 
 

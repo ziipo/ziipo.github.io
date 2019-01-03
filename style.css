@@ -12,6 +12,11 @@ body{
 	grid-template-columns: 1fr 1fr;
 }
 
+#queryRow {
+	display: flex;
+	justify-content: center;
+}
+
 .cal {
 	display: flex;
 	justify-content: center;
@@ -90,6 +95,23 @@ body{
 	transform: scale(1.1);
 	animation: ease-in(1.5);
 	transition: .5s;
+}
+
+#name-btn {
+  width: 40px;
+  height:40px;
+  color: blue;
+}
+
+#name-txt {
+  color: red;
+  height:30px;
+  border-radius: 10px;
+  border-style:none;
+  outline:none;
+  padding-right:1px;
+  padding-left:1px;
+  text-align:center;
 }
 
 #search-btn {
