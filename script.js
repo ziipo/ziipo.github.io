@@ -112,35 +112,35 @@
 		UTCdate1 = new Date((jsonObject.list[day1].dt)*1000);
 		// date1.innerHTML = days[(UTCdate1.getDay())] + " (today)" + "<br>" + months[(UTCdate1.getMonth())] + " " + UTCdate1.getDate();
 		date1.innerHTML = "Today" + "<br>" + months[(UTCdate1.getMonth())] + " " + UTCdate1.getDate();
-		icon1.src = "http://openweathermap.org/img/w/" + jsonObject.list[day1].weather[0].icon + ".png";
+		icon1.src = "https://openweathermap.org/img/w/" + jsonObject.list[day1].weather[0].icon + ".png";
 		temp1.innerHTML = (jsonObject.list[day1].main.temp).toFixed(0) + "° F";
 		wind1.innerHTML = (jsonObject.list[day1].wind.speed).toFixed(0) + " mph";
 		
 		day2 = 8;
 		UTCdate2 = new Date((jsonObject.list[day2].dt)*1000);
 		date2.innerHTML = days[(UTCdate2.getDay())] + "<br>" + months[(UTCdate2.getMonth())] + " " + UTCdate2.getDate();
-		icon2.src = "http://openweathermap.org/img/w/" + jsonObject.list[day2].weather[0].icon + ".png";
+		icon2.src = "https://openweathermap.org/img/w/" + jsonObject.list[day2].weather[0].icon + ".png";
 		temp2.innerHTML = (jsonObject.list[day2].main.temp).toFixed(0) + "° F";
 		wind2.innerHTML = (jsonObject.list[day2].wind.speed).toFixed(0) + " mph";
 
 		day3 = 16;
 		UTCdate3 = new Date((jsonObject.list[day3].dt)*1000);
 		date3.innerHTML = days[(UTCdate3.getDay())] + "<br>" + months[(UTCdate3.getMonth())] + " " + UTCdate3.getDate();
-		icon3.src = "http://openweathermap.org/img/w/" + jsonObject.list[day3].weather[0].icon + ".png";
+		icon3.src = "https://openweathermap.org/img/w/" + jsonObject.list[day3].weather[0].icon + ".png";
 		temp3.innerHTML = (jsonObject.list[day3].main.temp).toFixed(0) + "° F";
 		wind3.innerHTML = (jsonObject.list[day3].wind.speed).toFixed(0) + " mph";
 
 		day4 = 24;
 		UTCdate4 = new Date((jsonObject.list[day4].dt)*1000);
 		date4.innerHTML = days[(UTCdate4.getDay())] + "<br>" + months[(UTCdate4.getMonth())] + " " + UTCdate4.getDate();
-		icon4.src = "http://openweathermap.org/img/w/" + jsonObject.list[day4].weather[0].icon + ".png";
+		icon4.src = "https://openweathermap.org/img/w/" + jsonObject.list[day4].weather[0].icon + ".png";
 		temp4.innerHTML = (jsonObject.list[day4].main.temp).toFixed(0) + "° F";
 		wind4.innerHTML = (jsonObject.list[day4].wind.speed).toFixed(0) + " mph";
 
 		day5 = 32;
 		UTCdate5 = new Date((jsonObject.list[day5].dt)*1000);
 		date5.innerHTML = days[(UTCdate5.getDay())] + "<br>" + months[(UTCdate5.getMonth())] + " " + UTCdate5.getDate();
-		icon5.src = "http://openweathermap.org/img/w/" + jsonObject.list[day5].weather[0].icon + ".png";
+		icon5.src = "https://openweathermap.org/img/w/" + jsonObject.list[day5].weather[0].icon + ".png";
 		temp5.innerHTML = (jsonObject.list[day5].main.temp).toFixed(0) + "° F";
 		wind5.innerHTML = (jsonObject.list[day5].wind.speed).toFixed(0) + " mph";
 	}
@@ -162,7 +162,8 @@
 // map stuff
 	var platform = new H.service.Platform({
 	  'app_id': 'xuPPaedRxqWWetpVEIFx',
-	  'app_code': 'CbBgLhnXR7gxUFuzy47jMw'
+	  'app_code': 'CbBgLhnXR7gxUFuzy47jMw',
+	  'useHTTPS': true
 	});
 
 	// Obtain the default map types from the platform object:
@@ -190,7 +191,7 @@
 	  console.log(evt.type, evt.currentPointer.type); 
 	});
 	var behavior = new H.mapevents.Behavior(mapEvents);
-
+	
 // calendar / date stuff
 	let calMonth = document.getElementById("calMonth");
 	let calDay = document.getElementById("calDay");
