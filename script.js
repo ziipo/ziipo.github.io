@@ -1,38 +1,38 @@
 // Welcome title and name
 
-	// if (localStorage.getItem("nameKey") !== null) {
-	// 	var yourName = localStorage.getItem("nameKey");	
-	// } else {
-	// 	var yourName = "Ken";	
-	// }
-	// let welcome = document.getElementById("welcome");
-	// updateWelcome();
+	if (localStorage.getItem("nameKey") !== null) {
+		var yourName = localStorage.getItem("nameKey");	
+	} else {
+		var yourName = "Ken";	
+	}
+	let welcome = document.getElementById("welcome");
+	updateWelcome();
 
-	// function updateWelcome() {
-	// 	welcome.textContent = "Hello, " + yourName;	
-	// }
+	function updateWelcome() {
+		welcome.textContent = "Hello, " + yourName;	
+	}
 
-	// // updating the welcome name
-	// 	let nameButton = document.getElementById("name-btn");
-	// 	let nameInput = document.getElementById("name-txt");
-	// 	nameButton.addEventListener("click", changeName);
-	// 	nameInput.addEventListener("keyup", nameEnterPressed);
+	// updating the welcome name
+		let nameButton = document.getElementById("name-btn");
+		let nameInput = document.getElementById("name-txt");
+		nameButton.addEventListener("click", changeName);
+		nameInput.addEventListener("keyup", nameEnterPressed);
 		
-	// 	function nameEnterPressed(event) {
-	// 	  if (event.key === "Enter") {
-	// 	    changeName();
-	// 	  }
-	// 	}
+		function nameEnterPressed(event) {
+		  if (event.key === "Enter") {
+		    changeName();
+		  }
+		}
 
-	// function changeName() {
-	// 	if (nameInput.value === "") {
+	function changeName() {
+		if (nameInput.value === "") {
 		  
-	// 	  } else {
-	// 	   yourName = nameInput.value;
-	// 	   updateWelcome();
-	// 	   localStorage.setItem("nameKey", yourName);
-	// 	  }
-	// }
+		  } else {
+		   yourName = nameInput.value;
+		   updateWelcome();
+		   localStorage.setItem("nameKey", yourName);
+		  }
+	}
 
 
 
