@@ -231,7 +231,18 @@
 	setTimeout(setCalendar, 600);
 	setInterval(setCalendar,1000);
 
-window.scroll(0,0);
+
+
+function zoomOutMobile() {
+  var viewport = document.querySelector('meta[name="viewport"]');
+
+  if ( viewport ) {
+    viewport.content = "initial-scale=0.1";
+    viewport.content = "width=1200";
+  }
+}
+window.scrollTo(0,0);
+zoomOutMobile();
 
 
 
