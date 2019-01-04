@@ -4,9 +4,20 @@
 	<title>Dashboard v0</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- developer.here map code -->
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+		  type="text/javascript" charset="utf-8"></script>
+		<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+		  type="text/javascript" charset="utf-8"></script>
+		<script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
+	      type="text/javascript" charset="utf-8"></script>
+	    <link rel="stylesheet" type="text/css" 
+	      href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+
 </head>
 <body>
-	<h1 id="welcome">Welcome to the dashboard</h1>
+	<h1 id="welcome">Welcome, Ken</h1>
 
 <div id="queryRow">
 	<div class="search">
@@ -90,9 +101,29 @@
 		</div>
 	</div>
 </div>
-
+<div id="mapContainerContainer">
+	<div id="mapContainer"></div>
+</div>
 
 
 <script type="text/javascript" src="script.js"></script>
+<!-- <script type="text/javascript">
+	var platform = new H.service.Platform({
+	  'app_id': 'xuPPaedRxqWWetpVEIFx',
+	  'app_code': 'CbBgLhnXR7gxUFuzy47jMw'
+	});
+
+	// Obtain the default map types from the platform object:
+	var defaultLayers = platform.createDefaultLayers();
+
+	// Instantiate (and display) a map object:
+	var map = new H.Map(
+	  document.getElementById('mapContainer'),
+	  defaultLayers.normal.map,
+	  {
+	    zoom: 10,
+	    center: { lat: 52.5, lng: 13.4 }
+	});
+</script> -->
 </body>
 </html>

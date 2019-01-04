@@ -1,37 +1,39 @@
 // Welcome title and name
-if (sessionStorage.getItem("nameKey") !== null) {
-	var yourName = sessionStorage.getItem("nameKey");	
-} else {
-	var yourName = "Ken";	
-}
-let welcome = document.getElementById("welcome");
-updateWelcome();
 
-function updateWelcome() {
-	welcome.textContent = "Hello, " + yourName;	
-}
+	// if (localStorage.getItem("nameKey") !== null) {
+	// 	var yourName = localStorage.getItem("nameKey");	
+	// } else {
+	// 	var yourName = "Ken";	
+	// }
+	// let welcome = document.getElementById("welcome");
+	// updateWelcome();
 
-// updating the welcome name
-	let nameButton = document.getElementById("name-btn");
-	let nameInput = document.getElementById("name-txt");
-	nameButton.addEventListener("click", changeName);
-	nameInput.addEventListener("keyup", nameEnterPressed);
-	
-	function nameEnterPressed(event) {
-	  if (event.key === "Enter") {
-	    changeName();
-	  }
-	}
+	// function updateWelcome() {
+	// 	welcome.textContent = "Hello, " + yourName;	
+	// }
 
-function changeName() {
-	if (nameInput.value === "") {
-	  
-	  } else {
-	   yourName = nameInput.value;
-	   updateWelcome();
-	   sessionStorage.setItem("nameKey", yourName);
-	  }
-}
+	// // updating the welcome name
+	// 	let nameButton = document.getElementById("name-btn");
+	// 	let nameInput = document.getElementById("name-txt");
+	// 	nameButton.addEventListener("click", changeName);
+	// 	nameInput.addEventListener("keyup", nameEnterPressed);
+		
+	// 	function nameEnterPressed(event) {
+	// 	  if (event.key === "Enter") {
+	// 	    changeName();
+	// 	  }
+	// 	}
+
+	// function changeName() {
+	// 	if (nameInput.value === "") {
+		  
+	// 	  } else {
+	// 	   yourName = nameInput.value;
+	// 	   updateWelcome();
+	// 	   localStorage.setItem("nameKey", yourName);
+	// 	  }
+	// }
+
 
 
 
@@ -95,7 +97,7 @@ function changeName() {
 	  console.log(jsonObject);
 	  // cityName.innerHTML = jsonObject.name;
 	  cityName2.innerHTML = "Forecast for " + jsonObject.name;
-	  icon.src = "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
+	  icon.src = "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
 	  temperature.innerHTML = parseInt(jsonObject.main.temp) + "°";
 	  humidity.innerHTML = jsonObject.main.humidity + "%";
 	}
@@ -157,6 +159,31 @@ function changeName() {
 
 	httpRequestAsync(("https://api.openweathermap.org/data/2.5/forecast?zip=98001&units=imperial&appid="+appKey), forecastResponse);
 
+// map stuff
+	var platform = new H.service.Platform({
+	  'app_id': 'xuPPaedRxqWWetpVEIFx',
+	  'app_code': 'CbBgLhnXR7gxUFuzy47jMw'
+	});
+
+	// Obtain the default map types from the platform object:
+	var defaultLayers = platform.createDefaultLayers();
+
+	// Instantiate (and display) a map object:
+	var map = new H.Map(
+	  document.getElementById('mapContainer'),
+	  defaultLayers.normal.map,
+	  {
+	    zoom: 10.3,
+	    center: { lat: 47.45, lng: -122.27 }
+	});
+
+	map.setBaseLayer(defaultLayers.terrain.traffic);
+	map.addLayer(defaultLayers.incidents);
+
+	var ui = H.ui.UI.createDefault(map, defaultLayers);
+	// ui.getControl('mapsettings').setEnabled(false);
+	
+
 // calendar / date stuff
 	let calMonth = document.getElementById("calMonth");
 	let calDay = document.getElementById("calDay");
@@ -194,7 +221,7 @@ function changeName() {
 		// calTime.textContent = h + ":" + m + ampm;
 	}
 	setTimeout(setCalendar, 600);
-	setInterval(setCalendar,5000);
+	setInterval(setCalendar,1000);
 
 
 

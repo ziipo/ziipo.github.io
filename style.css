@@ -7,6 +7,17 @@ body{
   font-family:Arial;
 }
 
+#mapContainerContainer{
+	display:flex;
+	justify-content: center;
+}
+
+#mapContainer {
+	display:flex;
+	width: 250px;
+	height: 500px;
+}
+
 #topRow {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
