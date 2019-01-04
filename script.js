@@ -231,6 +231,7 @@
 	setTimeout(setCalendar, 600);
 	setInterval(setCalendar,1000);
 
+window.scroll(0,0);
 
 
 
