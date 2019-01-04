@@ -182,7 +182,14 @@
 
 	var ui = H.ui.UI.createDefault(map, defaultLayers);
 	// ui.getControl('mapsettings').setEnabled(false);
-	
+	var mapEvents = new H.mapevents.MapEvents(map);
+
+	// Add event listener:
+	map.addEventListener('tap', function(evt) {
+	  // Log 'tap' and 'mouse' events:
+	  console.log(evt.type, evt.currentPointer.type); 
+	});
+	var behavior = new H.mapevents.Behavior(mapEvents);
 
 // calendar / date stuff
 	let calMonth = document.getElementById("calMonth");
